@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using SQLite;
 
-namespace Navigation2.Models
+namespace eShopOnContainers.Core.Models.Catalog
 {
     public class CartItem
     {
