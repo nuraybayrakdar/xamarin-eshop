@@ -8,6 +8,7 @@ namespace Navigation2.Models
 {
     public class Account
     {
+        //for firebase asyncTask
         public static string CollectionPath = "accounts";
 
         [Id]
