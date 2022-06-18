@@ -4,7 +4,7 @@ using System.Text;
 using SQLite;
 using Plugin.CloudFirestore.Attributes;
 
-namespace Navigation2.Models
+namespace eShopOnContainers.Core.Models.User
 {
     public class Account
     {
