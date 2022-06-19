@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
 using Xamarin.Forms;
-using eShopOnContainers.Core.Service.DataHolder;
+using eShopOnContainers.Core.Services.DataHolder;
 using eShopOnContainers.Core.Models.Catalog;
 
 namespace eShopOnContainers.Core.ViewModels
