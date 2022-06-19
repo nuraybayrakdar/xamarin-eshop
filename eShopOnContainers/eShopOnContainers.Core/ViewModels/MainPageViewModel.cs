@@ -6,7 +6,7 @@ using System.Text;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using eShopOnContainers.Core.Models.Catalog;
-using eShopOnContainers.Core.Service.DataHolder;
+using eShopOnContainers.Core.Services.DataHolder;
 using System.Threading;
 
 namespace eShopOnContainers.Core.ViewModels
