@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eShopOnContainers.Core.Views.HomepageView"
+             xmlns:viemodels="clr-namespace:eShopOnContainers.Core.ViewModels" AutomationId="AnasayfaView">
+
+    <ContentPage.BindingContext>
+        <viemodels:HomepageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="kzlogo.png" />
+        <ToolbarItem IconImageSource="search.png" Command="{Binding SearchButtonCommand}"/>
+        <ToolbarItem IconImageSource="cart.png" Command="{Binding CartButtonCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto,*" RowSpacing="0" Background="White">
+                <Grid Grid.Row="1" ColumnDefinitions="10*,1*,10*" BackgroundColor="#F1F1F1" HeightRequest="30">
+                    <!--SOSYAL MEDYA BAGLANTI-->
+                    <ImageButton AutomationId="FacebookButon"
+                        Grid.Column="0" Source="facebookicon.png" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="End"
+                             HeightRequest="20" WidthRequest="15" Command="{Binding FacebookCommand}" />
+                    <ImageButton AutomationId="InstagramButon"
+                        Grid.Column="1" Source="instagramicon.png" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center"
+                             HeightRequest="20" WidthRequest="15" Command="{Binding InstagramCommand}"/>
+                    <ImageButton AutomationId="TwitterButon"
+                        Grid.Column="2" Source="twittericon.png" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start"
+                             HeightRequest="20" WidthRequest="15" Command="{Binding TwitterCommand}"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <!--BANNER-->
+                    <Image AutomationId="AnasayfaBanner" Source="kzbanner.jpg" HeightRequest="130" WidthRequest="100" Margin="10"/>
+                </Grid>
+                <!--KZ KULAKLIK MODELLERI LAYER-->
+                <Label Grid.Row="3" HorizontalOptions="Center" Text="KZ Kulaklık Modelleri" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+                <CollectionView Grid.Row="4" SelectionMode="Single" ItemsSource="{Binding Products}" AutomationId="AnasatfaCollectionView" 
+                            SelectedItem="{Binding SelectedProduct}" SelectionChanged="CollectionView_SelectionChanged" >
+                    <!--URUNLER-->
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.EmptyView >
+                        <Label AutomationId="CollectionViewItem" Text="Ürün kalmamıştır" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </CollectionView.EmptyView>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid AutomationId="CollectionViewItem" 
+                                ColumnDefinitions="*,*" RowDefinitions="12*,*,*" HeightRequest="240" BackgroundColor="White" Padding="5">
+
+                                <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" 
+                                       Source="{Binding Image}" WidthRequest="300" HeightRequest="300" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" 
+                                   Text="{Binding Name}" TextColor="#0b4374" FontSize="14" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="0" Grid.Row="2" 
+                                   Text="{Binding NoDiscount, StringFormat='{0} TL'}" TextColor="Gray" FontSize="14" FontAttributes="Bold" TextDecorations="Strikethrough"  HorizontalOptions="End"/>
+                                <Label Grid.Column="1" Grid.Row="2" 
+                                   Text="{Binding Price, StringFormat='{0} TL'}" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+
+
+</ContentPage>

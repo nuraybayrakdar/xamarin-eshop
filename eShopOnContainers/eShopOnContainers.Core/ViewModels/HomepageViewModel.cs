@@ -11,9 +11,9 @@ using System.Threading;
 
 namespace eShopOnContainers.Core.ViewModels
 {
-    public class MainPageViewModel : BaseViewModel
+    public class HomepageViewModel : BaseViewModel
     {
-        public MainPageViewModel()
+        public HomepageViewModel()
         {
             Products = DataHolder.Products;
         }
