@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eShopOnContainers.Core.Views.UrunDetay"
+             xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels">
+
+    <ContentPage.BindingContext>
+        <viewmodels:BaseViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid RowDefinitions="auto,*,Auto">
+                    <Image Source="{Binding SelectedProduct.Image}"  HorizontalOptions="Center" 
+               VerticalOptions="Center" BackgroundColor="White"/>
+                    <Grid Grid.Row="1" RowDefinitions="Auto,Auto,Auto,Auto" >
+                        <Label Text="{Binding SelectedProduct.Name}" Padding="15,0,10,0" TextColor="Black" FontSize="25" FontAttributes="Bold"/>
+                        <Label Grid.Row="1" Text="{Binding SelectedProduct.Views, StringFormat='{0} ★'}" 
+                      TextColor="#ffa200" FontSize="20" Padding="15,0,10,0" FontAttributes="Bold" />
+                        <Grid Grid.Row="2" ColumnDefinitions="Auto,Auto">
+                            <Label Grid.Column="0" Text="{Binding SelectedProduct.NoDiscount, StringFormat='{0} TL'}" Padding="15,0,10,0" TextColor="Gray" FontSize="14" FontAttributes="None" 
+                       TextDecorations="Strikethrough"  HorizontalOptions="Start"/>
+                            <Label Grid.Column="1" Text="{Binding SelectedProduct.Price, StringFormat='{0} TL'}" TextColor="Black" FontSize="14" FontAttributes="Bold" 
+                       TextDecorations="None"  HorizontalOptions="Start"/>
+                        </Grid>
+                        <Label Grid.Row="3" Text="{Binding SelectedProduct.Description}" Padding="15,10,10,0" TextColor="Black" FontSize="16" />
+
+                    </Grid>
+                    <Button Text="Sepete Ekle" Command="{Binding SepeteEkleCommand}" Grid.Row="2" Margin="15" TextColor="White" BackgroundColor="#69b7e8"/>
+
+                </Grid>
+                <!--Alakalı ürünler -->
+                <!--<CollectionView  SelectionMode="None" ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedProduct}" SelectionChanged="CollectionView_SelectionChanged">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal" Span="2" HorizontalItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.EmptyView >
+                        <Label Text="Ürün kalmamıştır" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </CollectionView.EmptyView>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="*,*" RowDefinitions="5*,*,*" HeightRequest="240" BackgroundColor="White" Padding="5">
+                                <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" 
+                                       Source="{Binding Image}" WidthRequest="300" HeightRequest="300" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" 
+                                   Text="{Binding Name}" TextColor="#0b4374" FontSize="Small" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="0" Grid.Row="2" 
+                                   Text="{Binding NoDiscount, StringFormat='{0} TL'}" TextColor="Gray" FontSize="Micro" FontAttributes="Bold" TextDecorations="Strikethrough"  HorizontalOptions="End"/>
+                                <Label Grid.Column="1" Grid.Row="2" 
+                                   Text="{Binding Price, StringFormat='{0} TL'}" TextColor="Black" FontSize="Micro" FontAttributes="Bold"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView> -->
+                
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>
