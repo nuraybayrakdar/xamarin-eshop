@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Navigation2.Views.AramaSonucu"
+             xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels">
+
+    <ContentPage.BindingContext>
+        <viewmodels:AramaSonucuViewModel/>
+    </ContentPage.BindingContext>
+
+
+
+    <ContentPage.Content>
+        <CollectionView Grid.Row="4" SelectionMode="Single" ItemsSource="{Binding Products}" 
+                            SelectedItem="{Binding SelectedProduct}" SelectionChanged="CollectionView_SelectionChanged" >
+            <!--URUNLER-->
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.EmptyView >
+                <Label Text="Ürün kalmamýþtýr" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*" RowDefinitions="12*,*,*" HeightRequest="240" BackgroundColor="White" Padding="5">
+
+                        <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" 
+                                       Source="{Binding Image}" WidthRequest="300" HeightRequest="300" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" 
+                                   Text="{Binding Name}" TextColor="#0b4374" FontSize="14" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Column="0" Grid.Row="2" 
+                                   Text="{Binding NoDiscount, StringFormat='{0} TL'}" TextColor="Gray" FontSize="14" FontAttributes="Bold" TextDecorations="Strikethrough"  HorizontalOptions="End"/>
+                        <Label Grid.Column="1" Grid.Row="2" 
+                                   Text="{Binding Price, StringFormat='{0} TL'}" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>

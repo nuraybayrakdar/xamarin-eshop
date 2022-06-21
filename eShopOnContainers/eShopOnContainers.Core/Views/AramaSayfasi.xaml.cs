@@ -9,7 +9,7 @@ using eShopOnContainers.Core.Service.Catalog;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Navigation2.Views
+namespace eShopOnContainers.Core.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AramaSayfasi : ContentPage
