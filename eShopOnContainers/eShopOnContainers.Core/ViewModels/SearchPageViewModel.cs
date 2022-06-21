@@ -25,7 +25,7 @@ namespace eShopOnContainers.Core.ViewModels
         private async void SearchByName()
         {
             DataHolder.GetProductsByName(Keyword);
-            await Shell.Current.GoToAsync($"///{nameof(Anasayfa)}/{nameof(AramaSonucu)}");
+            await Shell.Current.GoToAsync($"///{nameof(HomepageView)}/{nameof(AramaSonucu)}");
         }
 
     }

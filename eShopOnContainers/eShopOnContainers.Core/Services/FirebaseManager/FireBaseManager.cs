@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Plugin.CloudFirestore;
+using eShopOnContainers.Core.Models.User;
 
 namespace eShopOnContainers.Core.Services.FirebaseManager
 {
