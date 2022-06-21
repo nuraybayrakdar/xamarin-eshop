@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Navigation2.Views.AramaSonucu"
+             x:Class="eShopOnContainers.Core.Views.AramaSonucu"
              xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels">
 
     <ContentPage.BindingContext>
-        <viewmodels:AramaSonucuViewModel/>
+        <viewmodels:SearchPageViewModel/>
     </ContentPage.BindingContext>
 
 
@@ -18,7 +18,7 @@
                 <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10"/>
             </CollectionView.ItemsLayout>
             <CollectionView.EmptyView >
-                <Label Text="Ürün kalmamýþtýr" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text="ï¿½rï¿½n kalmamï¿½ï¿½tï¿½r" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
             </CollectionView.EmptyView>
             <CollectionView.ItemTemplate>
                 <DataTemplate>

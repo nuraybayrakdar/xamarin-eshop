@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Navigation2.Views.AccountPage"
+             x:Class="eShopOnContainers.Core.Views.AccountPage"
              xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels" AutomationId="HesapView">
     
     <ContentPage.BindingContext>
@@ -20,9 +20,9 @@
                 <ImageButton Grid.Column="2" Source="twittericon.png" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start"
                              HeightRequest="20" WidthRequest="15" Command="{Binding TwitterCommand}"/>
             </Grid>
-            <Label Text="{Binding Username, StringFormat='Merhaba {0} deðil misiniz? '}" TextColor="Black" 
+            <Label Text="{Binding Username, StringFormat='Merhaba {0} deï¿½il misiniz? '}" TextColor="Black" 
                    FontSize="Title"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-            <Button Text="Çýkýþ Yap" BackgroundColor="#0b4374" TextColor="White" HorizontalOptions="Center" VerticalOptions="StartAndExpand" WidthRequest="200" Command="{Binding LogoutCommand}"/>
+            <Button Text="ï¿½ï¿½kï¿½ï¿½ Yap" BackgroundColor="#0b4374" TextColor="White" HorizontalOptions="Center" VerticalOptions="StartAndExpand" WidthRequest="200" Command="{Binding LogoutCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -4,7 +4,7 @@
              x:Class="eShopOnContainers.Core.Views.SatinAlindi">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="KZ marka ürünleri tercih ettiðiniz için teþekkür ederiz."
+            <Label Text="KZ marka ï¿½rï¿½nleri tercih ettiï¿½iniz iï¿½in teï¿½ekkï¿½r ederiz."
                    TextColor="Black"
                    FontSize="Large"
                    HorizontalTextAlignment="Center"
