@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels"
+             x:Class="eShopOnContainers.Core.Views.ContactView" AutomationId="ContactView">
+
+    <ContentPage.BindingContext>
+        <viewmodels:ContactViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="kzlogo.png" Command="{Binding KZButtonCommand}"/>
+        <ToolbarItem IconImageSource="search.png" Command="{Binding SearchButtonCommand}"/>
+        <ToolbarItem IconImageSource="cart.png" Command="{Binding CartButtonCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,0,10,0" >
+                <Grid ColumnDefinitions="10*,1*,10*" BackgroundColor="#F1F1F1" HeightRequest="30">
+                    <!--SOSYAL MEDYA BAGLANTI-->
+                    <ImageButton AutomationId="FacebookButon"
+                        Grid.Column="0" Source="facebookicon.png" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="End"
+                             HeightRequest="20" WidthRequest="15" Command="{Binding FacebookCommand}" />
+                    <ImageButton AutomationId="InstagramButon"
+                        Grid.Column="1" Source="instagramicon.png" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center"
+                             HeightRequest="20" WidthRequest="15" Command="{Binding InstagramCommand}"/>
+                    <ImageButton AutomationId="TwitterButon"
+                        Grid.Column="2" Source="twittericon.png" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start"
+                             HeightRequest="20" WidthRequest="15" Command="{Binding TwitterCommand}"/>
+                </Grid>
+                <Label Text="Bize Ulaşın" TextColor="Black" FontSize="Title" FontAttributes="Bold"/>
+                <Label Text="Bizimle iletişime geçmek için aşağıdaki formu kullanın. Mesajınız en kısa sürede yanıtlanacaktır. " 
+                   TextColor="Black" FontSize="Small" FontAttributes="None"/>
+                <Label Text="Adınız" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Entry Placeholder="Adınız" FontSize="Small" BackgroundColor="White"/>
+                <Label Text="Email Adresiniz" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Entry Placeholder="Email Adresiniz" FontSize="Small" BackgroundColor="White"/>
+                <Label Text="Mesajınız" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Entry Placeholder="Mesajınız" FontSize="Small" BackgroundColor="White"/>
+                <Button Text="GÖNDER" TextColor="White" Font="Large" FontAttributes="Bold" BackgroundColor="#0b4374" HorizontalOptions="Start" WidthRequest="150"/>
+                <Label Text="Firma Resmi Adı: Hobijet.com Teknoloji ve Hobi Ürünleri İthalat Ticaret" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Label Text="Adres: Denizciler Cd. No:22, 41900 Derince Kocaeli" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Label Text="Telefon: 0262 2234668" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Label Text="Email: bilgi@kzkulaklik.com" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Label Text="Sicil No: 41/111154" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Label Text="Vergi No: 9380223946" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Label Text="Vergi Dairesi: Derince" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Label Text="KEP Adresi: hobijet@hs03.kep.tr" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
