@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using eShopOnContainers.Core.ViewModels;
-using eShopOnContainers.Core.Models;
+using eShopOnContainers.Core.Models.User;
 
 namespace eShopOnContainers.Core.Views
 {

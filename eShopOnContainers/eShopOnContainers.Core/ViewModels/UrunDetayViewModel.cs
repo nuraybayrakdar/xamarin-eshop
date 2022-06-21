@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Xamarin.Forms;
-using eShopOnContainers.Core.Models.Product;
+using eShopOnContainers.Core.Models.User;
 
 namespace eShopOnContainers.Core.ViewModels
 {
