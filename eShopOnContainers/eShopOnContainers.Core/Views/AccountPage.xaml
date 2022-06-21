@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Navigation2.Views.AccountPage"
+             xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels" AutomationId="HesapView">
+    
+    <ContentPage.BindingContext>
+        <viewmodels:AccountPageViewModel/>
+    </ContentPage.BindingContext>
+    
+    
+    <ContentPage.Content>
+        <StackLayout Padding="5,5,5,0">
+            <Grid ColumnDefinitions="10*,1*,10*" BackgroundColor="#F1F1F1" HeightRequest="30">
+                <!--SOSYAL MEDYA BAGLANTI-->
+                <ImageButton Grid.Column="0" Source="facebookicon.png" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="End"
+                             HeightRequest="20" WidthRequest="15" Command="{Binding FacebookCommand}" />
+                <ImageButton Grid.Column="1" Source="instagramicon.png" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center"
+                             HeightRequest="20" WidthRequest="15" Command="{Binding InstagramCommand}"/>
+                <ImageButton Grid.Column="2" Source="twittericon.png" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start"
+                             HeightRequest="20" WidthRequest="15" Command="{Binding TwitterCommand}"/>
+            </Grid>
+            <Label Text="{Binding Username, StringFormat='Merhaba {0} deðil misiniz? '}" TextColor="Black" 
+                   FontSize="Title"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <Button Text="Çýkýþ Yap" BackgroundColor="#0b4374" TextColor="White" HorizontalOptions="Center" VerticalOptions="StartAndExpand" WidthRequest="200" Command="{Binding LogoutCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

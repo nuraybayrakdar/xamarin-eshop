@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Navigation2.Views.AramaSayfasi"
+             xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels">
+
+    <ContentPage.BindingContext>
+        <viewmodels:AramaSayfasiPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Ara.." Text="{Binding Keyword}" FontSize="Default" BackgroundColor="White"/>
+            <Button Command="{Binding SearchCommand}" TextColor="White" BackgroundColor="#0b4374" Text="Ürünü Ara" HorizontalOptions="Start"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
