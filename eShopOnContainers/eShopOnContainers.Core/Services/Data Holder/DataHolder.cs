@@ -1,5 +1,6 @@
 using eShopOnContainers.Core.Models.Catalog;
 using eShopOnContainers.Core.Models.User;
+using eShopOnContainers.Core.Services.FirebaseManager;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -31,7 +32,7 @@ namespace eShopOnContainers.Core.Services.DataHolder
         public static async void GetProductsByCategory(string category)
         {
             FilteredList = new ObservableCollection<Product>();
-            var productsByCategory = await DatabaseManager.GetProductByCategory(category);
+            var productsByCategory = await DatabaseManager.DatabaseManager.GetProductByCategory(category);
             foreach (Product product in productsByCategory)
             {
                 FilteredList.Add(product);
@@ -41,7 +42,7 @@ namespace eShopOnContainers.Core.Services.DataHolder
         public static async void GetProductsByName(string name)
         {
             FilteredList = new ObservableCollection<Product>();
-            var productsByName = await DatabaseManager.GetProductByName(name);
+            var productsByName = await  DatabaseManager.DatabaseManager.GetProductByName(name);
             foreach (Product product in productsByName)
             {
                 FilteredList.Add(product);
@@ -52,7 +53,7 @@ namespace eShopOnContainers.Core.Services.DataHolder
 
         private static async void CheckDatabase()
         {
-            var databaseItems = await DatabaseManager.GetProduct();
+            var databaseItems = await DatabaseManager.DatabaseManager.GetProduct();
             foreach (var databaseItem in databaseItems)
             {
                 foreach (var product in Products)

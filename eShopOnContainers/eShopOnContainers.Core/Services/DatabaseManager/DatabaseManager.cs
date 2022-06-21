@@ -5,10 +5,12 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
-using eShopOnContainers.Core.Models;
+using eShopOnContainers.Core.Models.User;
 using System.Collections.ObjectModel;
+using eShopOnContainers.Core.Services.User;
+using eShopOnContainers.Core.Services.DataHolder;
 
-namespace eShopOnContainers.Core.Services.FirebaseManager
+namespace eShopOnContainers.Core.Services.DatabaseManager
 {
     public static class DatabaseManager
     {
@@ -39,7 +41,7 @@ namespace eShopOnContainers.Core.Services.FirebaseManager
             }
             if (await db.Table<Product>().CountAsync() == 0)
             {
-                foreach (var item in DataHolder.Products)
+                foreach (var item in DataHolder.DataHolder.Products)
                 {
                     await AddProduct(item);
                 }
