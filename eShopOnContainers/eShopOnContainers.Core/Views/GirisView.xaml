@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class=" eShopOnContainers.Core.Views.GirisView"
+             xmlns:viewmodels="clr-namespace: eShopOnContainers.Core.ViewModels" AutomationId="GirisView">
+
+    <ContentPage.BindingContext>
+        <viewmodels:LoginViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <ScrollView Padding="5,0,5,0">
+            <Grid RowDefinitions="*,*" Margin="5">
+                <Grid RowDefinitions="*,*,1.2*,*,1.2*,*,1.2*">
+                    <Label Text="GİRİŞ YAP" FontSize="Large" TextColor="Black"/>
+                    <Label Grid.Row="1" Text="Kullanıcı Adı" FontSize="Small" TextColor="Black" VerticalOptions="End"/>
+                    <Entry Grid.Row="2" AutomationId="LoginUsername" Text="{Binding Username}" Placeholder="Kullanıcı adı" FontSize="Small" BackgroundColor="White"/>
+                    <Label Grid.Row="3" Text="Parola" FontSize="Small" TextColor="Black" VerticalOptions="End"/>
+                    <Entry Grid.Row="4" AutomationId="LoginPassword" Text="{Binding Password}" IsPassword="True" Placeholder="Parola" FontSize="Small" BackgroundColor="White"/>
+                    <Grid Grid.Row="5" ColumnDefinitions="0.5*,4*">
+                        <CheckBox Grid.Column="0" />
+                        <Label Grid.Column="1" Text="Beni Hatırla" FontSize="Small" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start" />
+                    </Grid>
+                    <Button Grid.Row="6" AutomationId="LoginButon" Command="{Binding LoginCommand}" x:Name="buton" Clicked="buton_Clicked" TextColor="White" BackgroundColor="#0b4374" Text="Giriş Yap" HorizontalOptions="Start"/>
+                </Grid>
+                <Grid Grid.Row="1" RowDefinitions="*,*,1.2*,*,1.2*,1.2*">
+                    <Label Text="ÜYE OL" FontSize="Large" TextColor="Black"/>
+                    <Label Grid.Row="1" Text="Kullanıcı Adı" FontSize="Small" TextColor="Black" VerticalOptions="End"/>
+                    <Entry Grid.Row="2" Text="{Binding RegisterUsername}" Placeholder="Kullanıcı adı" FontSize="Small" BackgroundColor="White"/>
+                    <Label Grid.Row="3" Text="Parola" FontSize="Small" TextColor="Black" VerticalOptions="End"/>
+                    <Entry Grid.Row="4" Text="{Binding RegisterPassword}" IsPassword="True" Placeholder="Parola" FontSize="Small" BackgroundColor="White"/>
+                    <Label Grid.Row="5" Text="Kişisel verileriniz, gizlilik ilkeleri gereği koruma altındadır ve hiçbir şekilde paylaşılmaz."/>
+                    <Button Grid.Row="6" TextColor="White" Command="{Binding RegisterCommand}" BackgroundColor="#0b4374" Text="Üye Ol" HorizontalOptions="Start"/>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

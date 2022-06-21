@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eShopOnContainers.Core.Views.SepetView"
+             xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels">
+
+    <ContentPage.BindingContext>
+        <viewmodels:SepetViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <Grid RowDefinitions="0.4*,2*,0.5*,Auto,Auto,.5*" Padding="10,0,10,0">
+            <Grid RowDefinitions="*,0.1*" ColumnDefinitions="3*,*,*,*" >
+                <Label VerticalOptions="Center" FontSize="Small" FontAttributes="Bold" TextColor="Black" TextDecorations="None" Text="Ürün"/>
+                <Label VerticalOptions="Center" FontSize="Small" FontAttributes="Bold" TextColor="Black" Grid.Column="1" Text="Fiyat"/>
+                <Label VerticalOptions="Center" FontSize="Small" FontAttributes="Bold" TextColor="Black" Grid.Column="2" Text="Miktar"/>
+                <Label VerticalOptions="Center" FontSize="Small" FontAttributes="Bold" TextColor="Black" Grid.Column="3" Text="Ara Toplam"/>
+                <Line  StrokeThickness="3" Grid.Row="1" Grid.ColumnSpan="4" 
+                  X1="0"
+                  Y1="0"
+                  X2="500"
+                  Y2="0"
+                  Stroke="gray"/>
+            </Grid>
+            <CollectionView Grid.Row="1"  SelectionMode="None" AutomationId="SepetCollectionView" ItemsSource="{Binding CartItems}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="1" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="0.7*,2*,1*,1*,1*" HeightRequest="50" Padding="5" >
+                            <Image Grid.Column="0" Source="{Binding Product.Image}" HorizontalOptions="Start" VerticalOptions="Start" />
+                            <Label Grid.Column="1" Text="{Binding Product.Name}" TextColor="Black" HorizontalTextAlignment="Center"/>
+                            <Label Grid.Column="2" Text="{Binding Product.Price, StringFormat='{0} TL'}" TextColor="Black" FontAttributes="Bold" />
+                            <Label Grid.Column="3" Text="{Binding Amount}" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                            <Label Grid.Column="4" Text="{Binding Total, StringFormat='{0} TL'}" TextColor="Black" FontAttributes="Bold" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Grid Grid.Row="2" RowDefinitions="*,*" ColumnDefinitions="*,*">
+                <Label Grid.Row="0" Grid.Column="0" Text="Sepet Toplamı" FontSize="Medium" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding TotalPrice, StringFormat='{0} TL'}" FontSize="Medium" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="End"/>
+                <Line  StrokeThickness="2" Grid.Row="1" VerticalOptions="Start" Grid.ColumnSpan="2" 
+                  X1="0"
+                  Y1="0"
+                  X2="500"
+                  Y2="0"
+                  Stroke="gray"/>
+            </Grid>
+            <Button Grid.Row="3" Text="Satın Al"  Command="{Binding SatinAlmaCommand}" AutomationId="SatinAlButonu" TextColor="White" BackgroundColor="#0789d9" VerticalOptions="Start"/>
+            <Button Grid.Row="4" Text="Sepeti Temizle" Command="{Binding CartCleanCommand}" AutomationId="SepetTemizleButonu" TextColor="White" BackgroundColor="#0789d9" VerticalOptions="Start"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

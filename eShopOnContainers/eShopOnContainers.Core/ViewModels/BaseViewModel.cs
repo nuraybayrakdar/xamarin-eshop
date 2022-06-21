@@ -6,9 +6,10 @@ using System.Text;
 using Xamarin.Forms;
 using eShopOnContainers.Core.Models.Catalog;
 using eShopOnContainers.Core.Models.Basket;
-using eShopOnContainers.Core.Service.User;
-using eShopOnContainers.Core.Service.DataHolder;
-using eShopOnContainers.Core.Service.Basket;
+using eShopOnContainers.Core.Models.User;
+using eShopOnContainers.Core.Services.User;
+using eShopOnContainers.Core.Services.DataHolder;
+using eShopOnContainers.Core.Services.Basket;
 using Xamarin.Essentials;
 
 namespace eShopOnContainers.Core.ViewModels

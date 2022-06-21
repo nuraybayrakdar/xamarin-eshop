@@ -2,7 +2,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
-using eShopOnContainers.Core.User;
+using eShopOnContainers.Core.Services.User;
 using System.Collections.ObjectModel;
 using Firebase.Database;
 using Firebase.Database.Query;

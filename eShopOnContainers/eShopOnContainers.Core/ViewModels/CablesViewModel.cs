@@ -1,21 +1,18 @@
+ï»¿using eShopOnContainers.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Text;
-using Xamarin.Forms;
 using eShopOnContainers.Core.Services.DataHolder;
-using eShopOnContainers.Core.Models.Catalog;
 
 namespace eShopOnContainers.Core.ViewModels
 {
-    class KZKulaklikViewModel : BaseViewModel
+    class CablesViewModel : BaseViewModel
     {
-        public KZKulaklikViewModel()
+        public CablesViewModel()
         {
-            DataHolder.GetProductsByCategory("kulaklýk");
+            DataHolder.GetProductsByCategory("kablo");
             Products = DataHolder.FilteredList;
         }
-
     }
 }

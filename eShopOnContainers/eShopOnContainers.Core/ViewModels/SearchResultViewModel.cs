@@ -1,21 +1,22 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
 using Xamarin.Forms;
+using System.Threading.Tasks;
+using eShopOnContainers.Core.Views;
+using eShopOnContainers.Core.Models;
 using eShopOnContainers.Core.Services.DataHolder;
-using eShopOnContainers.Core.Models.Catalog;
+using System.Threading;
 
 namespace eShopOnContainers.Core.ViewModels
 {
-    class KZKulaklikViewModel : BaseViewModel
+    class SearchResultViewModel : BaseViewModel
     {
-        public KZKulaklikViewModel()
+        public SearchResultViewModel()
         {
-            DataHolder.GetProductsByCategory("kulaklýk");
             Products = DataHolder.FilteredList;
         }
-
     }
 }
