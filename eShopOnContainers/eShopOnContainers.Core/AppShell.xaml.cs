@@ -12,7 +12,7 @@ namespace eShopOnContainers.Core
         {
             InitializeComponent();
             AccountPage.IsVisible = false;
-            Routing.RegisterRoute(nameof(Sepet), typeof(Sepet));
+          //  Routing.RegisterRoute(nameof(Sepet), typeof(Sepet));
             Routing.RegisterRoute(nameof(AramaSayfasi), typeof(AramaSayfasi));
             Routing.RegisterRoute(nameof(AramaSonucu), typeof(AramaSonucu));
             Routing.RegisterRoute(nameof(SatinAlindi), typeof(SatinAlindi));

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using eShopOnContainers.Core.Models.User;
 using SQLite;
 
 namespace eShopOnContainers.Core.Models.Catalog

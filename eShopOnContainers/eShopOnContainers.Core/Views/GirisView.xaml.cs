@@ -17,7 +17,7 @@ namespace eShopOnContainers.Core.Views
         public GirisView()
         {
             InitializeComponent();
-            BindingContext = new LoginViewModel();
+            BindingContext = new LoginPageViewModel();
         }
         public void Login()
         {

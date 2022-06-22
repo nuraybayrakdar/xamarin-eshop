@@ -1,4 +1,6 @@
 using eShopOnContainers.Core.Models.Basket;
+using eShopOnContainers.Core.Models.Catalog;
+using eShopOnContainers.Core.Models.User;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

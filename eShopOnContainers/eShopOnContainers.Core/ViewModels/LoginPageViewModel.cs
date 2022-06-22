@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using eShopOnContainers.Core.Views;
 using eShopOnContainers.Core.Models;
 using eShopOnContainers.Core.Services.FirebaseManager;
+using eShopOnContainers.Core.Models.User;
 
 namespace eShopOnContainers.Core.ViewModels
 {
@@ -41,7 +42,7 @@ namespace eShopOnContainers.Core.ViewModels
                     AppShell denemeShell = new AppShell();
                     denemeShell.Login();
                     App.Current.MainPage = denemeShell;
-                    await Shell.Current.GoToAsync($"///{nameof(Anasayfa)}");
+                    await Shell.Current.GoToAsync($"///{nameof(HomepageView)}");
                 }
             }
         }

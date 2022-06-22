@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using eShopOnContainers.Core.Models;
 using eShopOnContainers.Core.ViewModels;
-using eShopOnContainers.Core.Service.Catalog;
+using eShopOnContainers.Core.Services.Catalog;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,7 +17,7 @@ namespace eShopOnContainers.Core.Views
         public AramaSayfasi()
         {
             InitializeComponent();
-            BindingContext = new AramaSayfasiPageViewModel();
+            BindingContext = new SearchPageViewModel();
         }
     }
 }

@@ -53,10 +53,7 @@
                 VerticalOptions="FillAndExpand"
                 Grid.Row="0">
                 <ListView.Behaviors>
-                    <xtc:EventToCommandBehavior
-                        Command="{Binding AddCommand}"
-                        EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}"
-                        EventName="ItemTapped" />
+                    
                 </ListView.Behaviors>
                 <ListView.Header>
                     <!--  TOTAL  -->

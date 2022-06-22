@@ -85,19 +85,19 @@
 
 
     <FlyoutItem Title="Anasayfa" AutomationId="AppShellAnasayfa">
-        <ShellContent Route="Anasayfa" ContentTemplate="{DataTemplate local:Anasayfa}" />
+        <ShellContent Route="Anasayfa" ContentTemplate="{DataTemplate local:HomepageView}" />
     </FlyoutItem>
-    <FlyoutItem Title="KZ Kulaklýk" AutomationId="AppShellKZKulaklik">
+    <FlyoutItem Title="KZ Kulaklï¿½k" AutomationId="AppShellKZKulaklik">
         <ShellContent Route="KZKulaklik" ContentTemplate="{DataTemplate local:KZKulaklik}" />
     </FlyoutItem>
     <FlyoutItem Title="Kablolar" AutomationId="AppShellKablolar">
-        <ShellContent AutomationId="AppShellKablolar" Route="Kablolar" ContentTemplate="{DataTemplate local:Kablolar}" />
+        <ShellContent AutomationId="AppShellKablolar" Route="Kablolar" ContentTemplate="{DataTemplate local:CablesView}" />
     </FlyoutItem>
-    <FlyoutItem Title="Bize Ulaþýn" AutomationId="AppShellBizeUlasin">
-        <ShellContent Route="Iletisim" ContentTemplate="{DataTemplate local:Iletisim}" />
+    <FlyoutItem Title="Bize Ulaï¿½ï¿½n" AutomationId="AppShellBizeUlasin">
+        <ShellContent Route="Iletisim" ContentTemplate="{DataTemplate local:ContactView}" />
     </FlyoutItem>
-    <FlyoutItem Title="Giriþ Yap" x:Name="LoginFlyout" AutomationId="AppShellGiris">
-        <ShellContent Route="Giris" x:Name="LoginPage" ContentTemplate="{DataTemplate local:Giris}" />
+    <FlyoutItem Title="Giriï¿½ Yap" x:Name="LoginFlyout" AutomationId="AppShellGiris">
+        <ShellContent Route="Giris" x:Name="LoginPage" ContentTemplate="{DataTemplate local:GirisView}" />
     </FlyoutItem>
     <FlyoutItem Title="Hesap" AutomationId="AppShellHesap">
         <ShellContent Route="AccountPage" x:Name="AccountPage" ContentTemplate="{DataTemplate local:AccountPage}" />

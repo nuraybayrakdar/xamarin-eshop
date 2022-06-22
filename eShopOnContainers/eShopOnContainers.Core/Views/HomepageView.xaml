@@ -35,7 +35,7 @@
                 </Grid>
                 <!--KZ KULAKLIK MODELLERI LAYER-->
                 <Label Grid.Row="3" HorizontalOptions="Center" Text="KZ Kulaklık Modelleri" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
-                <CollectionView Grid.Row="4" SelectionMode="Single" ItemsSource="{Binding Products}" AutomationId="AnasatfaCollectionView" 
+                <CollectionView Grid.Row="4" SelectionMode="Single" ItemsSource="{Binding Products}" AutomationId="AnasayfaCollectionView" 
                             SelectedItem="{Binding SelectedProduct}" SelectionChanged="CollectionView_SelectionChanged" >
                     <!--URUNLER-->
                     <CollectionView.ItemsLayout>
