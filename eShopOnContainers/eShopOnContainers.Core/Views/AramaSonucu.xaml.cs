@@ -1,3 +1,4 @@
+using eShopOnContainers.Core.Models.User;
 using eShopOnContainers.Core.ViewModels;
 using System;
 using System.Collections.Generic;

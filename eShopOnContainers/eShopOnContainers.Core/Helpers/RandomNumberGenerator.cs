@@ -1,5 +1,5 @@
 ﻿using System.Text;
-
+/*
 namespace eShopOnContainers.Core.Helpers
 {
     internal static class RandomNumberGenerator
@@ -21,3 +21,4 @@ namespace eShopOnContainers.Core.Helpers
         }
     }
 }
+*/

@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -5,7 +6,7 @@ using System.ComponentModel;
 using System.Text;
 using Xamarin.Forms;
 using eShopOnContainers.Core.Models.User;
-using eShopOnContainers.Core.Service.User;
+using eShopOnContainers.Core.Services.User;
 using System.Threading.Tasks;
 
 namespace eShopOnContainers.Core.ViewModels
@@ -27,7 +28,7 @@ namespace eShopOnContainers.Core.ViewModels
         private async void Logout()
         {
             App.Current.MainPage = new AppShell();
-            await Shell.Current.GoToAsync($"///{nameof(Anasayfa)}");
+            await Shell.Current.GoToAsync($"///{nameof(HomepageViewModel)}");
         }
     }
 }

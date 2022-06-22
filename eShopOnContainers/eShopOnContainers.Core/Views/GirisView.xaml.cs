@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eShopOnContainers.Core.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using eShopOnContainers.Core.Services;
 
 namespace eShopOnContainers.Core.Views
 {
@@ -15,6 +17,16 @@ namespace eShopOnContainers.Core.Views
         public GirisView()
         {
             InitializeComponent();
+            BindingContext = new LoginPageViewModel();
+        }
+        public void Login()
+        {
+            buton.IsVisible = false;
+        }
+
+        private void buton_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

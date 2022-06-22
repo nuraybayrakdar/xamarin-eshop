@@ -45,7 +45,7 @@ namespace eShopOnContainers.Core.ViewModels.Base
             Xamarin.Forms.DependencyService.RegisterSingleton<IDialogService>(new DialogService());
             Xamarin.Forms.DependencyService.RegisterSingleton<IOpenUrlService>(new OpenUrlService());
             Xamarin.Forms.DependencyService.RegisterSingleton<IRequestProvider>(requestProvider);
-            Xamarin.Forms.DependencyService.RegisterSingleton<IIdentityService>(new IdentityService(requestProvider));
+           // Xamarin.Forms.DependencyService.RegisterSingleton<IIdentityService>(new IdentityService(requestProvider));
             Xamarin.Forms.DependencyService.RegisterSingleton<IDependencyService>(new Services.Dependency.DependencyService());
             Xamarin.Forms.DependencyService.RegisterSingleton<IFixUriService>(new FixUriService(settingsService));
             Xamarin.Forms.DependencyService.RegisterSingleton<ILocationService>(new LocationService(requestProvider));
@@ -59,7 +59,7 @@ namespace eShopOnContainers.Core.ViewModels.Base
             Xamarin.Forms.DependencyService.Register<BasketViewModel> ();
             Xamarin.Forms.DependencyService.Register<CatalogViewModel> ();
             Xamarin.Forms.DependencyService.Register<CheckoutViewModel> ();
-            Xamarin.Forms.DependencyService.Register<LoginViewModel> ();
+            Xamarin.Forms.DependencyService.Register<LoginPageViewModel> ();
             Xamarin.Forms.DependencyService.Register<MainViewModel> ();
             Xamarin.Forms.DependencyService.Register<OrderDetailViewModel> ();
             Xamarin.Forms.DependencyService.Register<ProfileViewModel> ();

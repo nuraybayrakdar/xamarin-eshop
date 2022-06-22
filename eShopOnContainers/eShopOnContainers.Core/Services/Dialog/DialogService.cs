@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using eShopOnContainers.Core;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace eShopOnContainers.Services

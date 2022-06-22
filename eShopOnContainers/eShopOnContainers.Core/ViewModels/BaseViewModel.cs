@@ -11,6 +11,7 @@ using eShopOnContainers.Core.Services.User;
 using eShopOnContainers.Core.Services.DataHolder;
 using eShopOnContainers.Core.Services.Basket;
 using Xamarin.Essentials;
+using eShopOnContainers.Core.Views;
 
 namespace eShopOnContainers.Core.ViewModels
 {
@@ -79,11 +80,11 @@ namespace eShopOnContainers.Core.ViewModels
         //
         private async void GoToMain(object obj)
         {
-            await Shell.Current.GoToAsync($"//{nameof(Anasayfa)}");
+            await Shell.Current.GoToAsync($"//{nameof(HomepageView)}");
         }
         private async void GoToCart(object obj)
         {
-            await Shell.Current.GoToAsync(nameof(Sepet));
+            await Shell.Current.GoToAsync(nameof(SepetView));
         }
         private async void GoToSearch(object obj)
         {

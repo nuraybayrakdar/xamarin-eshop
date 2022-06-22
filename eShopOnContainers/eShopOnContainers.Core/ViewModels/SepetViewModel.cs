@@ -10,6 +10,7 @@ using eShopOnContainers.Core.Models.Catalog;
 using eShopOnContainers.Core.Services.Basket;
 using eShopOnContainers.Core.Services.DataHolder;
 using eShopOnContainers.Core.Services.FirebaseManager;
+using eShopOnContainers.Core.Views;
 
 namespace eShopOnContainers.Core.ViewModels
 {
@@ -55,7 +56,7 @@ namespace eShopOnContainers.Core.ViewModels
             if (CartItems == null || CartItems.Count == 0)
                 return;
             CartClean(this);
-            await Shell.Current.GoToAsync($"///{nameof(Anasayfa)}/{nameof(SatinAlindi)}");
+            await Shell.Current.GoToAsync($"///{nameof(HomepageView)}/{nameof(SatinAlindi)}");
 
         }
 

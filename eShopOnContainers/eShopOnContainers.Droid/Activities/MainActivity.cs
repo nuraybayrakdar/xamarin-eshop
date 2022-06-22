@@ -4,6 +4,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using eShopOnContainers.Core;
 using System;
 using Xamarin.Forms.Platform.Android;
 
