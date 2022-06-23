@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{30439DB7-E113-49CE-B929-AC9F22D59D29}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <RootNamespace>Navigation2.UITests</RootNamespace>
+        <AssemblyName>Navigation2.UITests</AssemblyName>
+        <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="NUnit">
+            <Version>3.13.2</Version>
+        </PackageReference>
+        <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+        <PackageReference Include="Xamarin.UITest">
+            <Version>3.0.18</Version>
+        </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Tests.cs" />
+        <Compile Include="AppInitializer.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <WCFMetadata Include="Connected Services\" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Navigation2\Navigation2\Navigation2.csproj">
+            <Project>{c97be22c-414d-4168-b6da-66712f58823c}</Project>
+            <Name>Navigation2</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

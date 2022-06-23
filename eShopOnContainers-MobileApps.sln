@@ -40,6 +40,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UiTest", "UiTest", "{25C7310A-D9D2-4E79-A8AA-502FA467431A}"
 	ProjectSection(SolutionItems) = preProject
 		AppInitializer.cs = AppInitializer.cs
+		Navigation2.UITests.csproj = Navigation2.UITests.csproj
 		Tests.cs = Tests.cs
 	EndProjectSection
 EndProject
