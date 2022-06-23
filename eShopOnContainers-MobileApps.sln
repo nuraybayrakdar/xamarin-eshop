@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32413.511
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{932D8224-11F6-4D07-B109-DA28AD288A63}"
 EndProject
@@ -42,6 +42,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UiTest", "UiTest", "{25C731
 		AppInitializer.cs = AppInitializer.cs
 		Navigation2.UITests.csproj = Navigation2.UITests.csproj
 		Tests.cs = Tests.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{E57C6E2D-CD59-4993-A66D-25FBAE5558DB}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\kz\KzProje\Navigation2.UnitTests\app.config = ..\..\kz\KzProje\Navigation2.UnitTests\app.config
+		..\..\kz\KzProje\Navigation2.UnitTests\packages.config = ..\..\kz\KzProje\Navigation2.UnitTests\packages.config
+		..\..\kz\KzProje\Navigation2.UnitTests\UnitTest1.cs = ..\..\kz\KzProje\Navigation2.UnitTests\UnitTest1.cs
+		..\..\kz\KzProje\Navigation2.UnitTests\UnitTests.csproj = ..\..\kz\KzProje\Navigation2.UnitTests\UnitTests.csproj
 	EndProjectSection
 EndProject
 Global
@@ -523,6 +531,8 @@ Global
 		{A7337243-33B8-463A-87AD-944B75EFD820} = {B7B1D395-4E06-4036-BE86-C216756B9367}
 		{FDD910BC-DF0F-483D-B7D5-C7D831855172} = {B7B1D395-4E06-4036-BE86-C216756B9367}
 		{76C5F2A7-6CD5-49EA-9F33-EC44DE6539C7} = {778289CA-31F7-4464-8C2A-612EE846F8A7}
+		{25C7310A-D9D2-4E79-A8AA-502FA467431A} = {A857AD10-40FF-4303-BEC2-FF1C58D5735E}
+		{E57C6E2D-CD59-4993-A66D-25FBAE5558DB} = {A857AD10-40FF-4303-BEC2-FF1C58D5735E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A9E878A-C296-4615-97AB-7A4505148872}
